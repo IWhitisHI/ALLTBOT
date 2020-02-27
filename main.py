@@ -23,7 +23,7 @@ def welcome(message):
 @bot.message_handler(content_types=["text"])
 def whoareyou(message):
 	if message.chat.type == 'private':
-		if message.text == "Данил":
+		if message.text == "ДанилОчка":
 
 			markup = types.InlineKeyboardMarkup(row_width=2)
 			item1 = types.InlineKeyboardButton("1", callback_data='d1')
@@ -31,7 +31,7 @@ def whoareyou(message):
 			markup.add(item1, item2)
 
 			bot.send_message(message.chat.id, "Який тиждень???", reply_markup=markup)
-		elif message.text == "Роман":
+		elif message.text == "Рамзес":
 
 			markup = types.InlineKeyboardMarkup(row_width=2)
 			item1 = types.InlineKeyboardButton("1", callback_data='r1')
@@ -39,7 +39,7 @@ def whoareyou(message):
 			markup.add(item1, item2)
 
 			bot.send_message(message.chat.id, "Який тиждень???", reply_markup=markup)
-		elif message.text == "Віталій":
+		elif message.text == "Вітольд":
 
 			markup = types.InlineKeyboardMarkup(row_width=2)
 			item1 = types.InlineKeyboardButton("1", callback_data='v1')

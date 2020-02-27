@@ -11,9 +11,9 @@ bot = telebot.TeleBot(config.TOKEN)
 def welcome(message):
 
 	markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-	item1 = types.KeyboardButton("Данил")
-	item2 = types.KeyboardButton("Роман")
-	item3 = types.KeyboardButton("Віталій")
+	item1 = types.KeyboardButton("ДанилОчка")
+	item2 = types.KeyboardButton("Рамзес")
+	item3 = types.KeyboardButton("Вітольд")
 
 	markup.add(item1, item2,item3)
 

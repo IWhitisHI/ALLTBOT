@@ -11,9 +11,9 @@ bot = telebot.TeleBot(config.TOKEN)
 def welcome(message):
 
 	markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-	item1 = types.KeyboardButton("ДанилОчка")
-	item2 = types.KeyboardButton("Рамзес")
-	item3 = types.KeyboardButton("Вітольд")
+	item1 = types.KeyboardButton("Данил")
+	item2 = types.KeyboardButton("Роман")
+	item3 = types.KeyboardButton("Віталій")
 
 	markup.add(item1, item2,item3)
 
@@ -23,7 +23,7 @@ def welcome(message):
 @bot.message_handler(content_types=["text"])
 def whoareyou(message):
 	if message.chat.type == 'private':
-		if message.text == "ДанилОчка":
+		if message.text == "Данил":
 
 			markup = types.InlineKeyboardMarkup(row_width=2)
 			item1 = types.InlineKeyboardButton("1", callback_data='d1')
@@ -31,7 +31,7 @@ def whoareyou(message):
 			markup.add(item1, item2)
 
 			bot.send_message(message.chat.id, "Який тиждень???", reply_markup=markup)
-		elif message.text == "Рамзес":
+		elif message.text == "Роман":
 
 			markup = types.InlineKeyboardMarkup(row_width=2)
 			item1 = types.InlineKeyboardButton("1", callback_data='r1')
@@ -39,7 +39,7 @@ def whoareyou(message):
 			markup.add(item1, item2)
 
 			bot.send_message(message.chat.id, "Який тиждень???", reply_markup=markup)
-		elif message.text == "Вітольд":
+		elif message.text == "Віталій":
 
 			markup = types.InlineKeyboardMarkup(row_width=2)
 			item1 = types.InlineKeyboardButton("1", callback_data='v1')
